@@ -100,6 +100,9 @@ class GraphvizPreviewView extends ScrollView
             font-weight: bold;
             font-size: larger;
           }
+          textarea {
+            resize:none;
+          }
         </style>
         <!-- Viz.js by mdaines from https://github.com/mdaines/viz.js -->
         <script src="atom://graphviz-preview/assets/viz.js"></script>
@@ -141,11 +144,11 @@ class GraphvizPreviewView extends ScrollView
                + "<p>It's possible to make some pretty amazing graphs using DOT+GraphViz - check out the <a href='http://www.graphviz.org/Gallery.php'>Graphiz Gallery</a> for some examples.</p>"
                + "<p>GraphViz lays each node out automatically.  You can also feed it parameters to change how it renders.</p>"
                + "<p>Here's a very simple Hello World example (Copy the code into the buffer to make this preview update):</p>"
-               + "<div><textarea cols='30' rows='10'>"+sampleGraph1+"</textarea>"
+               + "<div><textarea cols='30' rows='10' readonly>"+sampleGraph1+"</textarea>"
                + Viz(sampleGraph1, 'svg')
                + "</div>"
                + "<p>Here is a slightly more complicated version of the same graph with some addtional rendering parameters:</p>"
-               + "<div><textarea cols='30' rows='14'>"+sampleGraph2+"</textarea>"
+               + "<div><textarea cols='30' rows='14' readonly>"+sampleGraph2+"</textarea>"
                + Viz(sampleGraph2, 'svg')
                + "</div>";
             }
